@@ -37,5 +37,5 @@ Edit `app.json`
 
 Start by using pm2:
 ```
-pm2 start
+pm2 start app.json
 ```
