@@ -39,3 +39,8 @@ Start by using pm2:
 ```
 pm2 start app.json
 ```
+
+Firewall rules:
+1. Outbound connections to the port used by the frontend (typically 3000, 8080, or 80) need to be allowed.
+2. If not co-located with your node (not recommended), outbound connections to the RPC port of your node (20010 in the config above) also need to be allowed on the machine running the eth-net-stats-api, as well as inbound connections to the RPC port (also 20010) on the machine running your node. In this case, outbound connections to the node port (20000 in configuration above) would also need to be allowed.
+
